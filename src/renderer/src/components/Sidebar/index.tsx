@@ -57,9 +57,6 @@ export function Sidebar() {
                   {document.title}
                 </Navigation.Link>
               ))}
-              <Navigation.Link>Discover</Navigation.Link>
-              <Navigation.Link>Ignite</Navigation.Link>
-              <Navigation.Link>Rocketseat</Navigation.Link>
             </Navigation.SectionContent>
           </Navigation.Section>
         </Navigation.Root>
