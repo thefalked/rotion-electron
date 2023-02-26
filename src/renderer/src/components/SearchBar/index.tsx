@@ -27,13 +27,13 @@ export function SearchBar() {
         <MagnifyingGlass className="w-5 h-5" />
         <Command.Input
           autoFocus
-          placeholder="Buscar documentos..."
+          placeholder="Search for documents..."
           className="w-full bg-transparent focus:outline-none text-sm text-rotion-50 placeholder:text-rotion-200"
         />
       </div>
       <Command.List className="py-2 max-h-48 scrollbar-thin scrollbar-thumb-rotion-600 scrollbar-track-rotion-800">
         <Command.Empty className="py-3 px-4 text-rotion-200 text-sm">
-          Nenhum documento encontrado.
+          No documents found.
         </Command.Empty>
 
         <Command.Item className="py-3 px-4 text-rotion-50 text-sm flex items-center gap-2 hover:bg-rotion-700 aria-selected:!bg-rotion-600">
