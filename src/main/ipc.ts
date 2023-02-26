@@ -1,10 +1,18 @@
 import { ipcMain } from 'electron'
+import { IPC } from '@shared/constants/ipc'
+import { FetchAllDocumentsResponse } from '@shared/types/ipc'
 
-ipcMain.handle('fetch-documents', () => {
-  return [
-    {
-      id: '1',
-      title: 'test',
-    },
-  ]
-})
+ipcMain.handle(
+  IPC.DOCUMENTS.FETCH_ALL,
+  async (): Promise<FetchAllDocumentsResponse> => {
+    return {
+      data: [
+        {
+          id: '1',
+          title: 'test',
+          content: 'test content',
+        },
+      ],
+    }
+  },
+)
