@@ -6,7 +6,11 @@ import Typography from '@tiptap/extension-typography'
 import Placeholder from '@tiptap/extension-placeholder'
 import Document from '@tiptap/extension-document'
 
-export function Editor() {
+interface EditorProps {
+  content: string
+}
+
+export function Editor({ content }: EditorProps) {
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -23,7 +27,7 @@ export function Editor() {
         content: 'heading block*',
       }),
     ],
-    content: '<h1>Back-end</h1><p>document about back-end</p>',
+    content,
     autofocus: 'end',
     editorProps: {
       attributes: {
