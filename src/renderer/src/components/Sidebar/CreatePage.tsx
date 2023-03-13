@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Plus } from 'phosphor-react'
-import { Document } from '~/src/shared/types/ipc'
+import { Document } from '@shared/types/ipc'
 
 export function CreatePage() {
   const queryClient = useQueryClient()
