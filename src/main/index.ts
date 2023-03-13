@@ -3,6 +3,7 @@ import path from 'node:path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { createFileRoute, createURLRoute } from 'electron-router-dom'
 import { createTray } from './tray'
+import { createShortcuts } from './shortcuts'
 // @ts-ignore
 import icon from '../../resources/icon.png?asset'
 
@@ -30,6 +31,7 @@ function createWindow(): void {
   })
 
   createTray(mainWindow)
+  createShortcuts(mainWindow)
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
